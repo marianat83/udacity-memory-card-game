@@ -10,4 +10,4 @@ If not keep trying! the fewer steps you make the better! Have fun!
 
 # Click here to play
 
-Download the project or Click [this link](https://github.com/marianat83/memorycard)
+Download the project or Click [this link](https://github.com/marianat83/udacity-memory-card-game)
