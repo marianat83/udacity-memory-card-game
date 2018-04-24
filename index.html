@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Matching Game</title>
-    <meta name="description" content="">
+    <meta name="description" content="Memory Card Game for Udacity Course">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 
@@ -16,71 +19,43 @@
         </header>
 
         <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        	</ul>
-
-        	<span class="moves">3</span> Moves
+        	 <div id="rating">
+                <ul class="stars">
+                    <li id="one-star"><i class="fa fa-star"></i></li>
+                    <li id="two-star"><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+                <span class="moves">0</span> Moves
+            </div>
+			<div id="timer">
+                Timer: <label class="minutes">00</label>:<label class="seconds">00</label>
+            </div>
 
             <div class="restart">
+                Restart:
         		<i class="fa fa-repeat"></i>
         	</div>
         </section>
 
-        <ul class="deck">
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card match">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-            <li class="card match">
-                <i class="fa fa-anchor"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-diamond"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-leaf"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bomb"></i>
-            </li>
-            <li class="card open show">
-                <i class="fa fa-bolt"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-bicycle"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-paper-plane-o"></i>
-            </li>
-            <li class="card">
-                <i class="fa fa-cube"></i>
-            </li>
-        </ul>
+        <ul class="deck"></ul>
     </div>
-
+	
+	<div id="score-popup">
+        <h1>Congratulations you finished the game!</h1>
+        <div id="final-rating">
+            <ul class="stars">
+                <li id="one-star"><i class="fa fa-star"></i></li>
+                <li id="two-star"><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+        </div>
+        <h2>You won in: <label class="minutes">00</label> Mins <label class="seconds">00</label> Seconds!</h2>
+    <!-- Add an optional button to close the popup -->
+    <button id="play-again">Play Again</button>
+    <button id="close-popup">Close</button>
+    </div>
+	
+	<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
